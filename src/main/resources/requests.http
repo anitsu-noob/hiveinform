@@ -1,0 +1,128 @@
+
+###
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "test",
+  "password": "123456",
+  "birthDate": "2023-05-30T16:00:00.000Z",
+  "fullName": "干嘛！",
+  "address": "123456",
+  "role": "ROLE_ADMIN"
+}
+
+###
+GET http://localhost:8080/article/getArticle/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg2MTE4MjMxLCJleHAiOjE2ODYxMTk2NzF9.5eG8GQewRN_HvTz7LkKxRXN-iaax3rCE1IZ9xasETww
+
+###
+POST http://localhost:8080/Login
+Content-Type: application/json
+
+{
+  "username":"test",
+  "password":"123456"
+}
+
+###
+GET http://localhost:8080/article/getArticle/all
+Content-Type: application/json
+
+{
+  "search" : "test",
+  "page" : 0 ,
+  "size" : 6
+}
+
+###
+POST http://localhost:8080/article/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg4MzEwNjUwLCJleHAiOjE2ODgzOTcwNTB9.PREGlhMQsuDeb9AoMpvxp1AOwgKzr8JfYXK6tjL6YlI
+Content-Type: application/json
+ConfirmUserId:43
+
+{
+  "title": "Create a new article 11",
+  "content": "你干嘛！ 哎哟",
+  "author": "嘿嘿",
+  "userId": 43,
+  "visits": "1000",
+  "state": true,
+  "type": "test3"
+}
+
+###
+POST http://localhost:8080/comment/add
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg3MTc0ODg5LCJleHAiOjE2ODcxNzYzMjl9.2SJ1rRbzgBAybG__Nti4EVnxLIOcSjdflg9ix5xc_cA
+Content-Type: application/json
+ConfirmUserId:43
+
+{
+  "content": "这是什么牛逼代码，我怎么看不懂!!!",
+  "userId": 43,
+  "status": true,
+  "articleId": "648a8154e7c73c5cd3b6e933"
+}
+
+###
+POST http://localhost:8080/testing/add
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg2MTE4MjMxLCJleHAiOjE2ODYxMTk2NzF9.5eG8GQewRN_HvTz7LkKxRXN-iaax3rCE1IZ9xasETww
+Content-Type: application/json
+
+{
+  "title": "Test",
+  "content": "Test content",
+  "answer": "answer",
+  "attribute":"test attributes",
+  "type": "test"
+}
+
+###
+GET http://localhost:8080/testing/get/test1/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg2MTE4MjMxLCJleHAiOjE2ODYxMTk2NzF9.5eG8GQewRN_HvTz7LkKxRXN-iaax3rCE1IZ9xasETww
+
+###
+GET http://localhost:8080/paper/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg2MTE4MjMxLCJleHAiOjE2ODYxMTk2NzF9.5eG8GQewRN_HvTz7LkKxRXN-iaax3rCE1IZ9xasETww
+
+###
+POST http://localhost:8080/exam/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg2MTE4MjMxLCJleHAiOjE2ODYxMTk2NzF9.5eG8GQewRN_HvTz7LkKxRXN-iaax3rCE1IZ9xasETww
+Content-Type: application/json
+
+{
+  "name": "test",
+  "paper": {
+    "name": "test1"
+  }
+}
+
+###
+POST http://localhost:8080/userInform/updateInform
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg4MzEwNzMzLCJleHAiOjE2ODgzOTcxMzN9.Yyt_ZAzpEZ7iVqwyLipCyT6lPJcOMYpLW5TDH1ufvYE
+Content-Type: application/json
+ConfirmUserId:43
+
+{
+  "userId": 43,
+  "articleAdd": "3"
+}
+
+###
+GET http://localhost:8080/comment/getCommentById/647eaafe1429a141b44c0ce2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg2MTIzMzU3LCJleHAiOjE2ODYxMjQ3OTd9.K0XlgY8T56fTgMTxHxT9bQadII6YcxjVlGl54qFWqG0
+
+###
+GET http://localhost:8080/index/getArticle/43
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0MSIsImlhdCI6MTY4NjEyMzUyOCwiZXhwIjoxNjg2MTI0OTY4fQ.-h4RGgTyJXSVuYKms9PNWkeM5mi0jV6MXSFqIaZAFlA
+
+###
+POST http://localhost:8080/article/getArticle/type
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0RmluYWxsIiwiaWF0IjoxNjg4MzEwNzMzLCJleHAiOjE2ODgzOTcxMzN9.Yyt_ZAzpEZ7iVqwyLipCyT6lPJcOMYpLW5TDH1ufvYE
+Content-Type: application/json
+
+{
+  "type":"test",
+  "page":0,
+  "size":5
+}
