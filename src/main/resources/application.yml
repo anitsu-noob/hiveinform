@@ -2,8 +2,8 @@
 
 spring:
   redis:
-    host: localhost
-    port: 6379
+    host: ---your url---
+    port: ---port--- // 6397
   # jpa configuration
   jpa:
     hibernate:
@@ -16,30 +16,30 @@ spring:
   # datasource configuration
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/studentsource?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    username: root
-    password: 123456
+    url: jdbc:mysql://localhost:3306/---your database---?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username:  xxx
+    password:  xxx
   jackson:
     date-format: dd/MM/yyyy HH:mm:ss.SSS
   data:
     mongodb:
-      uri: mongodb://localhost:27017/articles
+      uri: mongodb://---your database---/articles
   rabbitmq:
-    host: localhost
+    host: ---url---
     port: 5672
-    username: guest
-    password: guest
+    username: ---your user---
+    password: ---your password---
   stomp:
     port: 61613
   mail:
-    host: smtp.qq.com
-    port: 587
-    username: 3312988295@qq.com
-    password: cfzpmwstjhxbchdf    # 授权码
+    host: ---your email---
+    port: ---your port---
+    username: ---your email address---
+    password: ---your email Auther key---    # 授权码
     default: UTF-8
     socketFactoryClass: javax.net.ssl.SSLSocketFactory   # 加密工厂
     debug: true
-    from: 3312988295@qq.com
+    from: ---your email address---
     protocol: smtp     #使用的协议
     smtp:
       ssl:
@@ -63,8 +63,5 @@ logging:
       springframework:
         security: DEBUG
 
-jwt:
-  secret: "2133344126997718w2anderer52334428577419an1tsu21777216b1s2t"
-  #弃用
 
 
