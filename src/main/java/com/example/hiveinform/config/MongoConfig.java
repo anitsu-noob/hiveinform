@@ -19,8 +19,8 @@ import java.util.Arrays;
 public class MongoConfig {
 
 
-    //mongodb://localhost:27017/articles
-    private String host = "localhost";
+    //mongodb://---your database---/articles
+    private String host = "---your host---";
 
     private Integer port = 27017;
 
