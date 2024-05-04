@@ -54,62 +54,17 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return resolver;
     }
 
-//    @Override
-//    public void addCorsMappings(CorsRegistry registry) {
-//        registry.addMapping("/**") // 所有的当前站点的请求地址，都支持跨域访问。
-//                .allowedOriginPatterns("*") // 所有的外部域都可跨域访问。 如果是localhost则很难配置，因为在跨域请求的时候，外部域的解析可能是localhost、127.0.0.1、主机名
-//                .allowCredentials(true) // 是否支持跨域用户凭证
-//                .allowedMethods("GET","POST") // 当前站点支持的跨域请求类型是什么
-//                .maxAge(3600); // 超时时长设置为1小时。 时间单位是秒。
-//    }
 
-
-//    @Bean
-//    BeanNameViewResolver beanNameViewResolver() {
-//        BeanNameViewResolver viewResolver = new BeanNameViewResolver();
-//        viewResolver.setOrder(0); // 数字越小，优先级越高
-//        return viewResolver;
-//    }
 
     @Bean
     InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setPrefix("/WEB-INF/classes/views/");
-//        viewResolver.setSuffix(".html");
-//        viewResolver.setViewClass(JstlView.class);
-//        viewResolver.setOrder(1);
         return viewResolver;
     }
 
 
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(new ConfirmInterceptor(userService))
-//                .addPathPatterns("/**").order(1);
-//    }
-
-    // restful api 弃用 jsp 用html 也可以对视图解析
-
-//    @Bean
-//    public SimpleMappingExceptionResolver simpleMappingExceptionResolver(){
-//        SimpleMappingExceptionResolver exceptionResolver = new SimpleMappingExceptionResolver();
-//        exceptionResolver.setDefaultErrorView("error");
-//        exceptionResolver.setExceptionAttribute("exception");
-//        Properties mappingsProperties = new Properties();
-//        mappingsProperties.put("com.example.demo.exception.StudentException", "student_error");
-//        exceptionResolver.setExceptionMappings(mappingsProperties);
-//        return exceptionResolver;
-//    }
-//           弃用
 
 
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(new AccessTokenInterceptor())
-//                .addPathPatterns("/login/**","/index/**") //后续增加需要拦截的评论和发表系统
-//                .excludePathPatterns("/js/**","/img/**");
-//    }
-//           弃用
 
 
 }
